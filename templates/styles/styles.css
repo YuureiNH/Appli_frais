@@ -1,0 +1,73 @@
+body {
+    background: #305a72;
+    background: -moz-linear-gradient(left, #305a72 0%, #4a8fb6 48%, #4a8fb6 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#305a72), color-stop(48%,#4a8fb6), color-stop(100%,#4a8fb6));
+    background: -webkit-linear-gradient(left, #305a72 0%,#4a8fb6 48%,#4a8fb6 100%);
+    background: -o-linear-gradient(left, #305a72 0%,#4a8fb6 48%,#4a8fb6 100%);
+    background: -ms-linear-gradient(left, #305a72 0%,#4a8fb6 48%,#4a8fb6 100%);
+    background: linear-gradient(to right, #305a72 0%,#4a8fb6 48%,#4a8fb6 100%);
+}
+h1 {
+    font-size: 35px;
+    color: #d5cda2;
+}
+/* css de l'alert' */
+.alert-danger, .alert-info{
+    margin-top: 15px;
+}
+
+/* css du menu */
+.menu {
+    background-color: #181B20;
+}
+.menu>div:hover{
+    background-color: white;
+}
+.block-link{
+    font-size: 16px;
+    display: block;
+    color: white;
+}
+.block-link:hover{
+    display: block;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+/* css du formulaire de connexion*/
+.container {
+    background-color: white;
+    margin-top: 50px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: #828276;
+}
+
+/* css déconnexion */
+.btn-danger a, .btn-danger a:hover{
+    color: wheat;
+    text-decoration: none;
+}
+
+/* css navbar */
+.navbar-nav li:hover {
+    background-color: blue;
+}
+.navbar-right li:hover{
+    background-color: rgb(248, 248, 248);
+}
+#navbar ul li a:hover {
+    color: white;
+}
+
+.fancybox-custom .fancybox-skin {
+    box-shadow: 0 0 50px #222;
+}
