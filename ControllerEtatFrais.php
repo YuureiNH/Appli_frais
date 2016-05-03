@@ -1,5 +1,5 @@
 ﻿<?php
-require ('/launcher.php');
+require ('launcher.php');
 
 $action = $_REQUEST['action'];
 $idVisiteur = $_SESSION['idVisiteur'];

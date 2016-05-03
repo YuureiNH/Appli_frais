@@ -1,6 +1,6 @@
 <?php
 setlocale (LC_TIME, 'fr_FR.utf8','fra');
-require '/launcher.php';
+require 'launcher.php';
 
 $login = '';
 if(isset($_COOKIE['login'])) { 

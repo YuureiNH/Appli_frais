@@ -11,9 +11,9 @@ if (isset($_SESSION['libelle'])) {
         $smarty->assign('menu', $menu);
     } else {
         $menu = array();
-        $menu[] = array('menu' => 'VALIDER Fiches cloturées', 'menu_link' => '/ControllerValideFrais.php?action=CL', 'compteur' => count($pdo->getFicheParVisiteurEtat('CL')));
-        $menu[] = array('menu' => 'Remboursé Fiches validé', 'menu_link' => '/ControllerValideFrais.php?action=VA', 'compteur' => count($pdo->getFicheParVisiteurEtat('VA')));
-        $menu[] = array('menu' => 'Bilan annuel par visiteur', 'menu_link' => '/ControllerBilan.php?action=VI');
+        $menu[] = array('menu' => 'VALIDER Fiches cloturées', 'menu_link' => 'ControllerValideFrais.php?action=CL', 'compteur' => count($pdo->getFicheParVisiteurEtat('CL')));
+        $menu[] = array('menu' => 'Remboursé Fiches validé', 'menu_link' => 'ControllerValideFrais.php?action=VA', 'compteur' => count($pdo->getFicheParVisiteurEtat('VA')));
+        $menu[] = array('menu' => 'Bilan annuel par visiteur', 'menu_link' => 'ControllerBilan.php?action=VI');
         $smarty->assign('menu', $menu);
     }
 }

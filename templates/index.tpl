@@ -2,7 +2,7 @@
 
 
 <h2 class="text-center"> Identification utilisateur</h2>
-<form action="/ControllerConnexion.php" method="post" role="form">
+<form action="ControllerConnexion.php" method="post" role="form">
     <div class="form-group">
         <label for="login">Login :</label>
         <input type="text" class="form-control" name="login" value="{$login|default:''}">

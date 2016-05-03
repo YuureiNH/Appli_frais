@@ -34,7 +34,7 @@ function connecter($id, $nom, $prenom, $libelle) {
  */
 function deconnecter() {
     session_destroy();
-    header('Location: ../index.php');
+    header('Location: index.php');
     exit();
 }
 
@@ -111,11 +111,13 @@ function estTableauEntiers($tabEntiers) {
  */
 function estDateDepassee($dateTestee) {
     $dateActuelle = date("d/m/Y");
+    
     @list($jour, $mois, $annee) = explode('/', $dateActuelle);
     $annee--;
     $AnPasse = $annee . $mois . $jour;
     @list($jourTeste, $moisTeste, $anneeTeste) = explode('/', $dateTestee);
-    return ($anneeTeste . $moisTeste . $jourTeste < $AnPasse);
+    
+    return ($anneeTeste . $moisTeste . $jourTeste > $AnPasse);
 }
 
 /**

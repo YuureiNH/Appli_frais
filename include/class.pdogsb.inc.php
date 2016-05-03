@@ -18,9 +18,9 @@
 class PdoGsb {
 
     private static $serveur = 'mysql:host=localhost';
-    private static $bdd = 'dbname=entreprise';
-    private static $user = 'root';
-    private static $mdp = '';
+    private static $bdd = 'dbname=u274722147_gsbfr';
+    private static $user = 'u274722147_admin';
+    private static $mdp = '130295';
     private static $monPdo;
     private static $monPdoGsb = null;
 
@@ -380,8 +380,8 @@ class PdoGsb {
      * @return un tableau avec des champs de jointure entre une fiche de frais et la ligne d'état 
      */
     public function getLesInfosFicheFrais($idVisiteur, $mois) {
-        $req = "select ficheFrais.idEtat as idEtat, ficheFrais.dateModif as dateModif, ficheFrais.nbJustificatifs as nbJustificatifs, 
-			ficheFrais.montantValide as montantValide, etat.libelle as libEtat from  fichefrais inner join Etat on ficheFrais.idEtat = Etat.id 
+        $req = "select fichefrais.idEtat as idEtat, fichefrais.dateModif as dateModif, fichefrais.nbJustificatifs as nbJustificatifs, 
+			fichefrais.montantValide as montantValide, etat.libelle as libEtat from  fichefrais inner join etat on fichefrais.idEtat = etat.id 
 			where fichefrais.idvisiteur ='$idVisiteur' and fichefrais.mois = '$mois'";
         $res = PdoGsb::$monPdo->query($req);
         $laLigne = $res->fetch(PDO::FETCH_ASSOC);
@@ -395,7 +395,7 @@ class PdoGsb {
      * @param $mois sous la forme aaaamm
      */
     public function majEtatFicheFrais($idVisiteur, $mois, $etat) {
-        $req = "update ficheFrais set idEtat = '$etat', dateModif = now() 
+        $req = "update fichefrais set idEtat = '$etat', dateModif = now() 
 		where fichefrais.idvisiteur ='$idVisiteur' and fichefrais.mois = '$mois'";
         
         $count  = PdoGsb::$monPdo->exec($req);
@@ -488,7 +488,7 @@ class PdoGsb {
     
     public function getVisiteurHaveForfaitYear($year) {
         $req = "SELECT DISTINCT idVisiteur, nom, prenom
-                FROM ficheFrais f
+                FROM fichefrais f
                     INNER JOIN personnel p on p.id = f.idVisiteur
 		WHERE mois like ".PdoGsb::$monPdo->quote($year.'%');
         $res = PdoGsb::$monPdo->query($req);

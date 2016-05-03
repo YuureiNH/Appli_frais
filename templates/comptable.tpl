@@ -15,7 +15,7 @@
                 <th>Date Modif</th>  
             </tr>
             {if $lesFicheCR|default:'empty' != 'empty'}
-                <form method="post" action='/ControllerValideFrais.php?action={$action}&validate=true'>
+                <form method="post" action='ControllerValideFrais.php?action={$action}&validate=true'>
                     {counter start=0 skip=1 direction='up' print=FALSE}
                     {foreach $lesFicheCR item='FicheCR'}
                         <tr>
@@ -23,7 +23,7 @@
                             <td> {$FicheCR['prenom']} {$FicheCR['nom']}</td>
                             <td>{montant id=$FicheCR['id'] mois=$FicheCR['mois']} €</td>
                             <td>{$FicheCR['dateModif']}</td>
-                            <td><a class="fancybox fancybox.ajax" href="./ControllerDisplay.php?action=voirEtatFrais&id={$FicheCR['id']}&mois={$FicheCR['mois']}&statut={$action}">Détails</a> / <a onclick="edition('./ControllerDisplay.php?print=true&action=voirEtatFrais&id={$FicheCR['id']}&mois={$FicheCR['mois']}&statut={$action}');return false;">Imprimer cette page</a></td>
+                            <td><a class="fancybox fancybox.ajax" href="ControllerDisplay.php?action=voirEtatFrais&id={$FicheCR['id']}&mois={$FicheCR['mois']}&statut={$action}">Détails</a> / <a onclick="edition('ControllerDisplay.php?print=true&action=voirEtatFrais&id={$FicheCR['id']}&mois={$FicheCR['mois']}&statut={$action}');return false;">Imprimer cette page</a></td>
                         </tr>
                     {/foreach}
                     <tr>

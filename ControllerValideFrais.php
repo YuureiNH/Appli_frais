@@ -1,5 +1,5 @@
 <?php
-require ('/launcher.php');
+require ('launcher.php');
 
 $mois_courant = getMois(date("d/m/Y"));
 $nombre_fiche_fermé = $pdo->FermerFicheMoisPrecedent($mois_courant);

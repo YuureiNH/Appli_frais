@@ -1,5 +1,5 @@
 <?php
-require ('/launcher.php');
+require ('launcher.php');
 
 $action = filter_input(INPUT_GET, 'action');
 $year = date('Y');

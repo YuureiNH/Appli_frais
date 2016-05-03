@@ -1,5 +1,5 @@
 ﻿<?php
-require ('/launcher.php');
+require ('launcher.php');
 
 $action = filter_input(INPUT_GET, 'action');
 $idVisiteur = filter_input(INPUT_GET, 'id');
@@ -39,4 +39,4 @@ $smarty->assign('montantValide', $montantValide);
 $smarty->assign('nbJustificatifs', $nbJustificatifs);
 $smarty->assign('dateModif', $dateModif);
 
-$smarty->display('bilanVisiteur.tpl');
+$smarty->display('bilanvisiteur.tpl');

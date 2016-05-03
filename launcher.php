@@ -6,10 +6,10 @@
     //@TODO : garder la saisie en cours validé
 
 session_start();
-require ('/include/class.pdogsb.inc.php');
+require ('include/class.pdogsb.inc.php');
 $pdo = PdoGsb::getPdoGsb();
-require ('/include/fct.inc.php');
-require '/libs/Smarty.class.php';
+require ('include/fct.inc.php');
+require 'libs/Smarty.class.php';
 
 if (!isset($smarty)) {
     $smarty = new Smarty;

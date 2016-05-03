@@ -17,7 +17,7 @@
                     {/foreach}
                 </ul>
                 <ul class="nav navbar-nav navbar-right text-center">
-                    <li><button type="button" class="btn btn-danger navbar-btn"><a class="block-link" href="/ControllerConnexion.php?logout=true">Déconnexion</a></button></li>
+                    <li><button type="button" class="btn btn-danger navbar-btn"><a class="block-link" href="ControllerConnexion.php?logout=true">Déconnexion</a></button></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
