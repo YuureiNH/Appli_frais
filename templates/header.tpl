@@ -3,7 +3,8 @@
     <head>
         <TITLE>APPLI-FRAIS</TITLE>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <link rel="shortcut icon" type="image/png" href="/templates/images/gsb.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+         
         <!-- JQUERY CDN -->
         <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 
@@ -24,13 +25,12 @@
 
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-        <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
-
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <link href="./templates/styles/styles.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
+        <img src="favicon.ico">
         <h1 class="text-center">Laboratoire pharmaceutique - Gestion des frais de visite </h1>
         <div class="container">
             {if $erreur != ''}
